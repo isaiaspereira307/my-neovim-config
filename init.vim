@@ -1,6 +1,7 @@
 lua require('plugins')
 lua require('gitsigns').setup()
 lua require("toggleterm").setup()
+lua require("bufferline").setup()
 set nu!
 set mouse=a
 set title
