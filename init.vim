@@ -2,6 +2,7 @@ lua require('plugins')
 lua require('gitsigns').setup()
 lua require("toggleterm").setup()
 lua require("bufferline").setup()
+lua require("indent_blankline").setup { show_current_context = true, show_current_context_start = true, }
 set nu!
 set mouse=a
 set title

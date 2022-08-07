@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
         use 'lewis6991/gitsigns.nvim'
         use 'xuyuanp/nerdtree-git-plugin'
         use 'bling/vim-bufferline'
+	use "lukas-reineke/indent-blankline.nvim"
         -- use 'leafgarland/typescript-vim'
         use 'kyazdani42/nvim-web-devicons'
         use 'ryanoasis/vim-devicons'
