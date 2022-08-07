@@ -1,29 +1,4 @@
-call plug#begin()
-
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'jiangmiao/auto-pairs'
-Plug 'nvie/vim-flake8'
-Plug 'python-mode/python-mode'
-Plug 'zxqfl/tabnine-vim'
-Plug 'ryanoasis/vim-devicons'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'bling/vim-bufferline'
-Plug 'leafgarland/typescript-vim'
-" Vim Script
-Plug 'folke/twilight.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-" Plug 'ryanoasis/vim-devicons' Icons without colours
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
-Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
-Plug 'https://github.com/morhetz/gruvbox.git'
-Plug 'https://github.com/sainnhe/gruvbox-material.git'
-Plug 'https://github.com/tc50cal/vim-terminal.git'
-
-call plug#end()
-
+lua require('plugins')
 set nu!
 set mouse=a
 set title
@@ -55,23 +30,9 @@ let g:scrollview_base = 'buffer'
 let g:scrollview_column = 80
 " In your init.lua or init.vim
 set termguicolors
-lua << EOF
-require("bufferline").setup{}
-require('gitsigns').setup()
-EOF
-
-lua << EOF
-require("twilight").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-}
-EOF
 
 map q :quit<CR>
 map <C-s> :write<CR>
-map <C-@> :bel terminal<CR>
-" map <C-@> :TerminalSplit bash<CR>
 map <C-w> :tabn<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
