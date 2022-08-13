@@ -1,8 +1,12 @@
 lua require('plugins')
+lua require('lualine').setup()
+lua require("nvim-autopairs").setup()
 lua require('gitsigns').setup()
 lua require("toggleterm").setup()
 lua require("bufferline").setup()
 lua require("indent_blankline").setup { show_current_context = true, show_current_context_start = true, }
+lua require('lspconfig')['pyright'].setup{ on_attach = on_attach, flags = lsp_flags }
+lua require('lspconfig')['tsserver'].setup{ on_attach = on_attach, flags = lsp_flags }
 set nu!
 set mouse=a
 set title
@@ -32,12 +36,13 @@ let g:scrollview_winblend = 75
 " Position the scrollbar at the 80th character of the buffer
 let g:scrollview_base = 'buffer'
 let g:scrollview_column = 80
-" In your init.lua or init.vim
-set termguicolors
+
 
 map q :quit<CR>
 map <C-s> :write<CR>
 map <C-w> :tabn<CR>
+map <C-Space> :ToggleTerm<CR>
+"map <> :Telescope<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
