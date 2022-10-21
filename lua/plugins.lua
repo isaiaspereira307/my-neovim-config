@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
 	use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
 	use 'windwp/nvim-autopairs'
         use 'nvie/vim-flake8'
-        use 'python-mode/python-mode'
         use 'ryanoasis/vim-devicons'
 	use {'neoclide/coc.nvim', branch = 'release'}
         use 'lewis6991/gitsigns.nvim'
@@ -42,4 +41,5 @@ return require('packer').startup(function(use)
 	use 'L3MON4D3/LuaSnip'
 	use 'onsails/lspkind.nvim'
 end)
+
 
