@@ -19,9 +19,6 @@ lua require("nvim-lsp-installer").setup{}
 lua require("lspconfig")['pyright'].setup{ on_attach = on_attach, flags = lsp_flags, }
 lua require("lspconfig")['rust_analyzer'].setup{ on_attach = on_attach, flags = lsp_flags, settings = { ["rust-analyzer"] = {} } }
 lua require("rust-tools").setup()
-
-
-
 set nu!
 set mouse=a
 set title
@@ -36,8 +33,6 @@ set clipboard=unnamed
 " zM - close all fold
 " zR - Unfold all
 syntax on
-let g:airline_theme = 'nightfox'
-" colorscheme gruvbox-material
 colorscheme nightfox
 let g:bufferline_echo = 1
 let g:bufferline_modified = '+'
@@ -51,9 +46,10 @@ let g:scrollview_base = 'buffer'
 let g:scrollview_column = 80
 " In your init.lua or init.vim
 set termguicolors
-
+" comment lines  :15,25s/^/#
 map q :quit<CR>
 map <C-s> :write<CR>
 map <C-w> :tabn<CR>
 map <C-Space> :ToggleTerm<CR>
 nnoremap <C-n> :NvimTreeToggle<CR>
+
