@@ -6,15 +6,6 @@ lua require("nvim-autopairs").setup()
 lua require('gitsigns').setup()
 lua require("toggleterm").setup()
 lua require("bufferline").setup()
-
-lua require('plugins')
-lua require('nvim-web-devicons').setup()
-lua require("nvim-tree").setup()
-lua require("lualine").setup() 
-lua require("nvim-autopairs").setup()
-lua require('gitsigns').setup()
-lua require("toggleterm").setup()
-lua require("bufferline").setup()
 lua require("nvim-lsp-installer").setup{}
 lua require("lspconfig")['pyright'].setup{ on_attach = on_attach, flags = lsp_flags, }
 lua require("lspconfig")['rust_analyzer'].setup{ on_attach = on_attach, flags = lsp_flags, settings = { ["rust-analyzer"] = {} } }
